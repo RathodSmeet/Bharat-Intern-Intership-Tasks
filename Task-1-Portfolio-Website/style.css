@@ -120,13 +120,13 @@ body.dark{
 
  .active-link::after {
     content: "";
-    position: relative;
+    position: absolute;
     left: 50%;
     bottom: -15px;
     transform: translate(-50%, -50%);
     width: 50px;
     height: 2px;
-    background-color: var(--first-color);
+    background: var(--first-color);
 
 
  }
@@ -764,6 +764,12 @@ footer {
 /* media query = 900px */
 
 @media only screen and (max-width: 900px) {
+   .nav-logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+   }
+   
    .nav-menu-btn {
       display: none;
    }
@@ -795,6 +801,8 @@ footer {
       align-items: center;
       justify-content: center;
    }
+
+   
 
    .featured-box {
       flex-direction: column;
@@ -857,7 +865,7 @@ footer {
    .mode {
       display: flex;
       align-items: center;
-      margin-left: 60%;
+      margin-left: 80%;
    }
 }
 

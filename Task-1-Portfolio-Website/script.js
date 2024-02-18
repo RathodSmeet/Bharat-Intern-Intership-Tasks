@@ -20,7 +20,7 @@ toggleSwitch.addEventListener("click", ()=> {
 /* Typing Effect */
 
 var typingEffect = new Typed(".typedText",{
-    strings: ["Designer", "Coder", "Developer"],
+    strings: ["Coder", "Developer"],
 
     loop: true,
     typeSpeed: 100,
@@ -82,25 +82,19 @@ function scrollActive() {
 
     sections.forEach((current) => {
         const sectionHeight = current.offsetHeight,
-
             sectionTop = current.offsetTop - 50,
             sectionId = current.getAttribute("id");
         
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document
-            .querySelector(".nav-menu a[href*=" + sectionId + " ]")
-            .classList.add(".active-link");
-
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector(".nav-menu a[href*=" + sectionId + "]").classList.add("active-link");
         } else {
-            document
-            .querySelector(".nav-menu a[href*=" + sectionId + " ]")
-            .classList.remove(".active-link");
+            document.querySelector(".nav-menu a[href*=" + sectionId + "]").classList.remove("active-link");
         }
-
     });
 }
 
-Window.addEventListener("scroll", scrollActive);
+window.addEventListener("scroll", scrollActive);
+
 
 
 
