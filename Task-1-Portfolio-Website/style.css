@@ -386,7 +386,7 @@ body.dark{
    flex-direction: column;
    padding-block: 45px 45px;
    padding-inline: 35px;
-   
+   width: 80%;
    border: 2px solid #fff;
    background-color: transparent;
    box-shadow: 1px 8px 10px 2px var(--first-shadow);
@@ -660,7 +660,9 @@ body.dark{
    height: 55px;
    background: transparent;
    border: 2px solid #aaa;
+   color: var(--text-color);
    padding-inline: 20px;
+   margin-bottom: 10px;
    border-radius: 10px;
    outline: none;
 }
@@ -670,6 +672,7 @@ body.dark{
    height: 55px;
    background: transparent;
    border: 2px solid #aaa;
+   color: var(--text-color);
    border-radius: 10px;
    padding-inline: 20px;
    margin-bottom: 10px;
@@ -740,6 +743,11 @@ footer {
    display: flex;
    gap: 30px;
    color: var(--color-white);
+   
+}
+
+.footer-social-icons .icon {
+   cursor: pointer;
 }
 
 .bottom-footer {

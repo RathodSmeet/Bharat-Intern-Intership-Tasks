@@ -59,7 +59,7 @@
                             <span class="typedText"></span>
                         </div>
                         <div class="text-info">
-                            <p>My name is Smeet! I,m Web developer</p>
+                            <p>My name is Smeet! I,m Web developer.</p>
                         </div>
                         <div class="text-btn">
                             <button class="btn hire-btn">Hire Me</button>
@@ -67,10 +67,10 @@
                         </div>
                         <div class="social_icons">
                             <div class="icon_circle"></div>
-                            <div class="icon"><i class="uil uil-instagram"></i></div>
-                            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-                            <div class="icon"><i class="uil uil-twitter-alt"></i></div>
-                            <div class="icon"><i class="uil uil-github-alt"></i></div>
+                            <div class="icon" onclick="redirectToInstagram()"><i class="uil uil-instagram"></i></div>
+                            <div class="icon" onclick="redirectToLinkedIn()"><i class="uil uil-linkedin-alt"></i></div>
+                            <div class="icon" onclick="redirectToTwitter()"><i class="uil uil-twitter-alt"></i></div>
+                            <div class="icon" onclick="redirectToGitHub()"><i class="uil uil-github-alt"></i></div>
                         </div>
                     </div>
                     <div class="featured_image">
@@ -177,23 +177,25 @@
                         <div class="col">
                             <div class="contact-info">
                                 <h2>Find me <i class="uil uil-corner-right-down"></i></h2>
-                                <p><i class="uil uil-envelope"></i>Smeet Rathod</p>
-                                <p><i class="uil uil-phone"></i>Phone:0123456789</p>
+                                <p><i class="uil uil-envelope"></i>rathodsmeet2145@gmail.com</p>
+                                <p><i class="uil uil-phone"></i>94276 77342</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-control">
-                                <div class="form-inputs">
-                                    <input type="text" class="input-field" placeholder="Your Name">
-                                    <input type="text" class="input-field" placeholder="Your Email">
-                                </div>
-                                <div class="text-area">
-                                    <input type="text" class="input-subject" placeholder="Subject">
-                                    <textarea placeholder="message"></textarea>
-                                </div>
-                                <div class="form-button">
-                                    <button class="btn">Send <i class="uil uil-message"></i></button>
-                                </div>
+                                <form action="" method="post" onsubmit="return validateForm()">
+                                    <div class="form-inputs">
+                                        <input id="name" type="text" class="input-field" placeholder="Your Name"> <div id="nameError" class="error"></div>
+                                        <input id="email" type="email" class="input-field" placeholder="Your Email">
+                                    </div>
+                                    <div class="text-area">
+                                        <input type="text" id="subject" class="input-subject" placeholder="Subject">  <div id="subjectError" class="error"></div>
+                                        <textarea id="message" placeholder="message"></textarea>  <div id="messageError" class="error"></div>
+                                    </div>
+                                    <div class="form-button">
+                                        <button id="submitBtn" class="btn">Send <i class="uil uil-message"></i></button>
+                                    </div>
+                                </form>    
                             </div>
                         </div>
                     </div>
@@ -218,10 +220,10 @@
                     </ul>
                 </div>
                 <div class="footer-social-icons">
-                    <div class="icon"><i class="uil uil-instagram"></i></div>
-                    <div class="icon"><i class="fa-brands fa-linkedin-in icon"></i></div>
-                    <div class="icon"><i class="uil uil-twitter-alt"></i></div>
-                    <div class="icon"><i class="uil uil-github-alt"></i></div>
+                    <div class="icon" onclick="redirectToInstagram()"><i class="uil uil-instagram"></i></div>
+                    <div class="icon" onclick="redirectToLinkedIn()"><i class="fa-brands fa-linkedin-in icon"></i></div>
+                    <div class="icon" onclick="redirectToTwitter()"><i class="uil uil-twitter-alt"></i></div>
+                    <div class="icon" onclick="redirectToGitHub()"><i class="uil uil-github-alt"></i></div>
                 </div>
                 <div class="bottom-footer">
                     <p>Copyright &copy; <a href="#home" style="text-decoration:none;">Smeet Rathod</a>- All rights

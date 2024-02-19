@@ -28,6 +28,33 @@ var typingEffect = new Typed(".typedText",{
     backDelay: 2000, 
 })
 
+/* Social Media Links */
+function redirectToInstagram() {
+    
+    var instagramUsername = 'smeet__rathod_';
+    window.open('https://www.instagram.com/' + instagramUsername, '_blank');
+  } 
+
+  function redirectToLinkedIn() {
+    
+    var linkedInUsername = 'smeet-rathod';
+    window.open('https://www.linkedin.com/in/' + linkedInUsername, '_blank');
+  }
+
+  function redirectToTwitter() {
+    
+    var twitterUsername = 'Rathod_Smeet_';
+    window.open('https://twitter.com/' + twitterUsername, '_blank');
+  }
+
+  function redirectToGitHub() {
+    
+    var githubUsername = 'RathodSmeet';
+    window.open('https://github.com/' + githubUsername, '_blank');
+  }
+
+  
+
 /*Scroll animation */
 
 const sr = ScrollReveal({
@@ -95,6 +122,70 @@ function scrollActive() {
 
 window.addEventListener("scroll", scrollActive);
 
+/* Contact Form */
 
+document.getElementById('submitBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the form from submitting by default
+    if(validateForm()) {
+        // If the form is valid, you can proceed with form submission
+        // For now, let's just log the data
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var subject = document.getElementById('subject').value.trim();
+        var message = document.getElementById('message').value.trim();
+
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Subject:', subject);
+        console.log('Message:', message);
+
+        // Here you can trigger the form submission to the server using AJAX or submit the form directly
+        // Example:
+        // document.getElementById('myForm').submit();
+    }
+});
+
+function validateForm() {
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var subject = document.getElementById('subject').value.trim();
+    var message = document.getElementById('message').value.trim();
+    var isValid = true;
+
+    document.getElementById('nameError').innerText = "";
+    document.getElementById('emailError').innerText = "";
+    document.getElementById('subjectError').innerText = "";
+    document.getElementById('messageError').innerText = "";
+
+    if (name === "") {
+        document.getElementById('nameError').innerText = "Name is required";
+        isValid = false;
+    }
+
+    if (email === "") {
+        document.getElementById('emailError').innerText = "Email is required";
+        isValid = false;
+    } else if (!validateEmail(email)) {
+        document.getElementById('emailError').innerText = "Invalid email format";
+        isValid = false;
+    }
+
+    if (subject === "") {
+        document.getElementById('subjectError').innerText = "Subject is required";
+        isValid = false;
+    }
+
+    if (message === "") {
+        document.getElementById('messageError').innerText = "Message is required";
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
 
 
