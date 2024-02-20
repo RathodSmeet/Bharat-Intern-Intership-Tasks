@@ -185,7 +185,7 @@
                             <div class="form-control">
                                 <form action="" method="post" onsubmit="return validateForm()">
                                     <div class="form-inputs">
-                                        <input id="name" type="text" class="input-field" placeholder="Your Name"> <div id="nameError" class="error"></div>
+                                        <input id="name" type="text" required class="input-field" placeholder="Your Name"> <div id="nameError" class="error"></div>
                                         <input id="email" type="email" class="input-field" placeholder="Your Email">
                                     </div>
                                     <div class="text-area">
@@ -193,7 +193,8 @@
                                         <textarea id="message" placeholder="message"></textarea>  <div id="messageError" class="error"></div>
                                     </div>
                                     <div class="form-button">
-                                        <button id="submitBtn" class="btn">Send <i class="uil uil-message"></i></button>
+                                        <!-- <button id="submitBtn" class="btn">Send <i class="uil uil-message"></i></button> -->
+                                        <input type="submit" value="send" class="btn">
                                     </div>
                                 </form>    
                             </div>
