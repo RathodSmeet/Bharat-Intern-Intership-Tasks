@@ -183,18 +183,18 @@
                         </div>
                         <div class="col">
                             <div class="form-control">
-                                <form action="" method="post" onsubmit="return validateForm()">
+                                <form action="https://formsubmit.co/el/luweje" method="POST">
                                     <div class="form-inputs">
-                                        <input id="name" type="text" required class="input-field" placeholder="Your Name"> <div id="nameError" class="error"></div>
-                                        <input id="email" type="email" class="input-field" placeholder="Your Email">
+                                        <input id="name" type="text" required class="input-field" placeholder="Your Name"> 
+                                        <input id="email" type="email" required class="input-field" placeholder="Your Email">
                                     </div>
                                     <div class="text-area">
-                                        <input type="text" id="subject" class="input-subject" placeholder="Subject">  <div id="subjectError" class="error"></div>
-                                        <textarea id="message" placeholder="message"></textarea>  <div id="messageError" class="error"></div>
+                                        <input type="text" id="subject" class="input-subject" placeholder="Subject" required>  
+                                        <textarea id="message" placeholder="message" required></textarea>  
                                     </div>
                                     <div class="form-button">
-                                        <!-- <button id="submitBtn" class="btn">Send <i class="uil uil-message"></i></button> -->
-                                        <input type="submit" value="send" class="btn">
+                                        <input type="hidden" value="https://mail.google.com/">
+                                        <button type="submit" value="send" class="btn">Send</button>
                                     </div>
                                 </form>    
                             </div>
